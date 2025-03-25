@@ -132,6 +132,7 @@ app.post("/water-intake", (req, res) => {
 
 // (Optional) GET /tasks => to verify data is saved
 app.get("/tasks", (req, res) => {
+  console.log("Getting logs...");
   db.query("SELECT * FROM tasks ORDER BY id DESC", (err, rows) => {
     if (err) {
       console.error("Error fetching tasks:", err);
